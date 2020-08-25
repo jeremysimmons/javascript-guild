@@ -21,6 +21,8 @@ const arraysEqual = (arr1, arr2) => {
 var expectedResults = [2,3,4,5,6,7,8,9,10];
 var actualResults = incrementByOne(numbers);
 
+append(`<h1>Map - Increment By One</h1>`)
+
 append(`<strong>Numbers</strong>`)
 append(`<pre>${asString(numbers)}</pre>`)
 
