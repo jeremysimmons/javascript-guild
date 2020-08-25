@@ -5,21 +5,23 @@ const append = function(str) {
   appDiv.insertAdjacentHTML( 'beforeend', str );
 }
 
-var numbers = [1,2,3,4,5,6,7,8,9];
+var numbers = [9,8,7,6,5,4,3,2,1];
 
 const asString = (array) => {
   return JSON.stringify(array);
 }
 
-const incrementByOne = (list) => {
-   return list.map(x => x + 1);
+const incrementByIndex = (list) => {
+   return list.map((value, index) => value + index);
 }
 const arraysEqual = (arr1, arr2) => {
   return  JSON.stringify(arr1)===JSON.stringify(arr2);
 }
 
-var expectedResults = [2,3,4,5,6,7,8,9,10];
-var actualResults = incrementByOne(numbers);
+var expectedResults = [9,9,9,9,9,9,9,9,9];
+var actualResults = incrementByIndex(numbers);
+
+append(`<h1>Increment By Index</h1>`)
 
 append(`<strong>Numbers</strong>`)
 append(`<pre>${asString(numbers)}</pre>`)
